@@ -63,8 +63,8 @@ namespace Selenium.Support
                 }
 
                 _driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
+                _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
                 _context.Set(_driver);
-
             }
         }
     }
