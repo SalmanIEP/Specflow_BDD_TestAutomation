@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SeleniumTestFramworkDemo</id>
+    <version>1.0.0</version>
+    <authors>Selenium</authors>
+    <owners>Selenium</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>This is Testing Framework</description>
+    <copyright>Copy Right @2020</copyright>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Microsoft.Extensions.Configuration.Json" version="3.1.6" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NET.Test.Sdk" version="16.6.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="NUnit3TestAdapter" version="3.17.0" exclude="Build,Analyzers" />
+        <dependency id="Selenium.Support" version="3.141.0" exclude="Build,Analyzers" />
+        <dependency id="Selenium.WebDriver" version="3.141.0" exclude="Build,Analyzers" />
+        <dependency id="Selenium.WebDriver.ChromeDriver" version="83.0.4103.3915" exclude="Build,Analyzers" />
+        <dependency id="SpecFlow.NUnit" version="3.3.57" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netcoreapp2.1/testhost.exe" buildAction="Content" />
+      <files include="any/netcoreapp2.1/testhost.dll" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.runtimeconfig.json" target="lib\netcoreapp2.1\Selenium.runtimeconfig.json" />
+    <file src="D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.dll" target="lib\netcoreapp2.1\Selenium.dll" />
+    <file src="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.6.1\build\netcoreapp2.1\x64\testhost.exe" target="content\testhost.exe" />
+    <file src="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.6.1\build\netcoreapp2.1\x64\testhost.exe" target="contentFiles\any\netcoreapp2.1\testhost.exe" />
+    <file src="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.6.1\build\netcoreapp2.1\x64\testhost.dll" target="content\testhost.dll" />
+    <file src="C:\Users\admin\.nuget\packages\microsoft.testplatform.testhost\16.6.1\build\netcoreapp2.1\x64\testhost.dll" target="contentFiles\any\netcoreapp2.1\testhost.dll" />
+  </files>
+</package>
