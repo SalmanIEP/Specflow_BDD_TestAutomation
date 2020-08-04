@@ -52,7 +52,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">29/07/2020 18:35:29</span>
+                    <span class="badge badge-primary">04/08/2020 18:46:22</span>
                 </a>
             </li>
         </ul>
@@ -107,7 +107,7 @@
 											<i class="fa fa-exclamation-circle"></i>
 										</a>
 										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>											<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																																																							<div class="dropdown-divider"></div>
 											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 										</ul>
 									</li>
@@ -115,25 +115,25 @@
                             </div>
                             <div class="test-list-wrapper scrollable">
                                 <ul class="test-list-item">
-										<li class="test-item" status="pass" author="" device="" tag=""> 
-											<div class="status-avatar pass-bg">
-												<i class="fa fa-check text-white"></i>
+										<li class="test-item" status="fail" author="" device="" tag=""> 
+											<div class="status-avatar fail-bg">
+												<i class="fa fa-times text-white"></i>
 											</div>
 											<div class="open-test">
 												<div class="test-detail"> 
 													<p class="name">LoginFeature</p> 
-													<p class="duration text-sm">0h:0m:14s+428ms</p> 
-													<span class="datetime">18:35:29 PM</span>
+													<p class="duration text-sm">0h:0m:45s+550ms</p> 
+													<span class="datetime">18:46:22 PM</span>
 												</div>
 											</div>
 											<div class="test-contents d-none">
 												<div class="detail-head">
 													<div class="p-v-10 d-inline-block">	
 														<div class="info">
-															<h5 class="test-status text-pass">LoginFeature</h5>
-															<span class='badge badge-success'>29/07/2020 18:35:29</span>
-															<span class='badge badge-danger'>29/07/2020 18:35:43</span>
-															<span class='badge badge-default'>0h:0m:14s+428ms</span>
+															<h5 class="test-status text-fail">LoginFeature</h5>
+															<span class='badge badge-success'>04/08/2020 18:46:22</span>
+															<span class='badge badge-danger'>04/08/2020 18:47:08</span>
+															<span class='badge badge-default'>0h:0m:45s+550ms</span>
 														</div>
 																											</div>
 												</div>
@@ -142,12 +142,81 @@
 	<div class="card">
 		<div class="card-header" role="tab">
 			<h5 class="card-title pl-3">
-				<div class="node">Login With InValid Credintials</div>
+				<div class="node">1 Login With Valid Credintials</div>
 				<div class="status-avatar float-left pass-bg">
 					<i class="fa fa-check text-white"></i>
 				</div>
 			</h5>
 		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>User must need to login before purchasing</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start when" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>User provide Valid "salmanarshad1830@gmail.com" and "MTIzNDU2"</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start when" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Select the Login Button</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start then" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>User must be Logged in to Sample Site Successfully</span>
+							</div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<h5 class="card-title pl-3">
+				<div class="node">2 Login With InValid Credintials</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+			</h5>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>User Try to login with invalid credentials</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start when" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>User provide InValid "salmanarshad1830@gmail.com" and "MTIzNDU3"</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start when" title="">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Select the Login Button</span>
+							</div>
+							<div class="d-flex align-items-center justify-content-start then" title="">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
+								</span>
+								<span>User must be not allowed to logged in to the sample site</span>
+							</div>
+			<div class="details">Unable to login to the site
+  Expected: False
+  But was:  True</div>
+					</div>
+				</div>
 	</div>
 </div>
 											</div>
