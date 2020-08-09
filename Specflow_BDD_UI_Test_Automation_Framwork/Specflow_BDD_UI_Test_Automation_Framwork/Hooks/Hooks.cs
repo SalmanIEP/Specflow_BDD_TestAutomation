@@ -45,6 +45,10 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             scenario = featureName.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
             var config = ConfigurationManager.Configuration();
             var isRemote = config["IsRemoteDriver"];
+            if (config["Is2FEnabled"].Equals(true))
+            {
+                _scenarioContext.Add("2FAPassCode", _2FAuthentication.GetGoogleAuthenticationPassCode());
+            }
             DriverFactory factory = new DriverFactory(_scenarioContext);
             factory.Init(Browsers.Chrome, bool.Parse(isRemote));
             InitPages();

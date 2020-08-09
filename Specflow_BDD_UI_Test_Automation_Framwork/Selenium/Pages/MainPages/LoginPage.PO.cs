@@ -21,7 +21,7 @@ namespace Selenium.Pages.MainPages
         {
            type(email,Txt_Email);
            type(ConfigurationManager.DecodePassword(password), Txt_Password);
-            
+           
         }
         public void SelectLogginButton()
         {
