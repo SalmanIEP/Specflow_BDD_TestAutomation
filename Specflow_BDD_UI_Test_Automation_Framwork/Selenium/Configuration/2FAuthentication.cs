@@ -10,7 +10,7 @@ namespace Selenium.Configuration
         public static string GetGoogleAuthenticationPassCode()
         {
             var Config = ConfigurationManager.Configuration();
-            var otpKeyStr = Config["IsRemoteDriver"];
+            var otpKeyStr = Config["2FSecretKey"];
             var otpKeyBytes = Base32Encoding.ToBytes(otpKeyStr);
             var totp = new Totp(otpKeyBytes);
             return totp.ComputeTotp();
