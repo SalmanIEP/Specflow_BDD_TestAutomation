@@ -3,6 +3,8 @@ using TechTalk.SpecFlow;
 using Selenium.Intilaizer;
 using NUnit.Framework;
 using Selenium.Pages.MainPages;
+using Selenium.Configuration;
+using OpenQA.Selenium;
 
 namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
 {
@@ -15,36 +17,31 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
             this._contex = _contex;
         }
 
-        [Given(@"User must need to login before purchasing")]
-        public void GivenUserMustNeedToLoginBeforePurchasing()
+        [Given(@"User must need to login before continue")]
+        public void GivenUserMustNeedToLoginBeforeContinue()
         {
-            _contex.Get<HomePage>().GoToTheSite();
-            _contex.Get<HomePage>().SelectSignInTab();
+            var config = ConfigurationManager.Configuration();
+            var Url = config["TestEnviornmentUrl"];
+            _contex.Get<IWebDriver>().Navigate().GoToUrl(Url);
         }
+
+        [Then(@"User need to provide Valid Passcode for (.*)FA to further allowed to move to the site")]
+        public void ThenUserNeedToProvideValidPasscodeForFAToFurtherAllowedToMoveToTheSite(int p0)
+        {
+            _contex.Get<LoginPage>().Enter2FAPasscode();
+        }
+
+        [Then(@"Select Verfiy button")]
+        public void ThenSelectVerfiyButton()
+        {
+            _contex.Get<LoginPage>().SelectVerifyButton();
+        }
+
 
         [Then(@"User must be Logged in to Sample Site Successfully")]
         public void ThenUserMustBeLoggedInToSampleSiteSuccessfully()
         {
             Assert.IsTrue(_contex.Get<LoginPage>().IsloggedIn(),"Unable to login to the site");
-        }
-
-        [Given(@"User Try to login with invalid credentials")]
-        public void GivenUserTryToLoginWithInvalidCredentials()
-        {
-            _contex.Get<HomePage>().GoToTheSite();
-            _contex.Get<HomePage>().SelectSignInTab();
-        }
-
-        [When(@"User provide InValid ""(.*)"" and ""(.*)""")]
-        public void WhenUserProvideInValidAnd(string email, string password)
-        {
-            _contex.Get<LoginPage>().EnterLoginDetail(email, password);
-        }
-
-        [Then(@"User must be not allowed to logged in to the sample site")]
-        public void ThenUserMustBeNotAllowedToLoggedInToTheSampleSite()
-        {
-            Assert.IsFalse(_contex.Get<LoginPage>().IsloggedIn(), "Unable to login to the site");
         }
 
     }

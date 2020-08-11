@@ -1,25 +1,16 @@
 ﻿Feature: LoginFeature
-	In order to purchase anything on sample site 
-	user must need to be logged in
+	In Order to login to the okta account user must pass 2FA Authntication 
 
-Scenario Outline:1 Login With Valid Credintials
-Given User must need to login before purchasing
+Scenario Outline:1 Login With Valid Credintials using Okta Verify Factor
+Given User must need to login before continue
 When User provide Valid "<Email>" and "<Password>"
 And Select the Login Button
+Then User need to provide Valid Passcode for 2FA to further allowed to move to the site
+Then Select Verfiy button
 Then User must be Logged in to Sample Site Successfully
 
 Examples: 
-| Email                      | Password |
-| salmanarshad1830@gmail.com | MTIzNDU2 |
-
-Scenario Outline:2 Login With InValid Credintials
-Given User Try to login with invalid credentials
-When User provide InValid "<Email>" and "<Password>"
-And Select the Login Button
-Then User must be not allowed to logged in to the sample site 
-
-Examples: 
-| Email                      | Password |
-| salmanarshad1830@gmail.com | MTIzNDU3 |
+| Email                         | Password        |
+| PlaceyourEmailforokta         | Passwordforokta |
 
 

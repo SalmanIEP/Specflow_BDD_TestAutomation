@@ -18,8 +18,6 @@ namespace Selenium.Intilaizer
         public void InitPages()
         {
             context.Set(new LoginPage(context));
-            context.Set(new HomePage(context));
-            
         }
     }
 }
