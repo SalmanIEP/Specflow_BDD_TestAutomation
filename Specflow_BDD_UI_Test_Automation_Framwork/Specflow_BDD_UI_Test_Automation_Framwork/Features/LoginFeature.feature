@@ -10,7 +10,7 @@ Then Select Verfiy button
 Then User must be Logged in to Sample Site Successfully
 
 Examples: 
-| Email                         | Password        |
-| PlaceyourEmailforokta         | Passwordforokta |
+| Email                                 | Password    |
+| your okta email address               | ********* |
 
 

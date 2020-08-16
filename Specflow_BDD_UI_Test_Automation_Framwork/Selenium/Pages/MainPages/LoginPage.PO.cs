@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using Newtonsoft.Json;
 using OpenQA.Selenium;
 using Selenium.Configuration;
 using TechTalk.SpecFlow;
 
+
 namespace Selenium.Pages.MainPages
 {
-   public  class LoginPage : BasePage
+   public class LoginPage : BasePage
     {
         ScenarioContext context;
+        IWebDriver driver;
         public LoginPage(ScenarioContext context):base(context)
         {
             this.context = context;
+            
         }
         By Txt_Email = By.Id("okta-signin-username");
         By Txt_Password = By.Id("okta-signin-password");
@@ -51,5 +55,6 @@ namespace Selenium.Pages.MainPages
 
             return Loggedin;
         }
+
     }
 }

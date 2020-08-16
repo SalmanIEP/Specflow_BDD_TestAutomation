@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "56777dcf28f7d86cb045aa3a3f94350927862846"
+    "signature": "27dbb736c64bbe0e856a19c7946f493f2ef967e0"
   },
   "compilationOptions": {},
   "targets": {
@@ -87,6 +87,14 @@
           "lib/netstandard1.0/Google.Protobuf.dll": {
             "assemblyVersion": "3.7.0.0",
             "fileVersion": "3.7.0.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.24": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.24.0",
+            "fileVersion": "1.11.24.0"
           }
         }
       },
@@ -813,6 +821,19 @@
           "runtime/ubuntu.16.10-x64/native/_._": {
             "rid": "ubuntu.16.10-x64",
             "assetType": "native"
+          }
+        }
+      },
+      "Selenium.Axe/1.5.2": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.24",
+          "Newtonsoft.Json": "12.0.3",
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Selenium.Axe.dll": {
+            "assemblyVersion": "1.5.2.0",
+            "fileVersion": "1.5.2.0"
           }
         }
       },
@@ -1986,10 +2007,12 @@
       },
       "SeleniumTestFramworkDemo/1.0.0": {
         "dependencies": {
+          "ExtentReports.Core": "1.0.3",
           "Microsoft.Extensions.Configuration.Json": "3.1.6",
           "Microsoft.NET.Test.Sdk": "16.6.1",
           "NUnit3TestAdapter": "3.17.0",
           "Otp.NET": "1.2.2",
+          "Selenium.Axe": "1.5.2",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "83.0.4103.3915",
@@ -2048,6 +2071,13 @@
       "sha512": "sha512-OvssyqQTrpJgdH4fjztsCV9AhUo9jgGpDbZ5XAAqC+X6MIUsifHk8Woeom1HXlHdqo/XebiEMpYySE9AxybJ9g==",
       "path": "google.protobuf/3.7.0",
       "hashPath": "google.protobuf.3.7.0.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DLcytINO8EfCdBgMGsaz8Tvdgu2Aewoo2XX7WfZuRG9cBQRtbm8JZ4/sMRtFvzehjdIDqubdlQb8TqNfjRMEWg==",
+      "path": "htmlagilitypack/1.11.24",
+      "hashPath": "htmlagilitypack.1.11.24.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.1.0": {
       "type": "package",
@@ -2398,6 +2428,13 @@
       "sha512": "sha512-leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "Selenium.Axe/1.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZxSl9t0lwFeBfhIvFjGD+5B6aFR8UsjZ2WZKq8ZegHs0byPufw26fO8svcalM4+BQT2HpdJnq4+7zzm6iaI/lA==",
+      "path": "selenium.axe/1.5.2",
+      "hashPath": "selenium.axe.1.5.2.nupkg.sha512"
     },
     "Selenium.Support/3.141.0": {
       "type": "package",

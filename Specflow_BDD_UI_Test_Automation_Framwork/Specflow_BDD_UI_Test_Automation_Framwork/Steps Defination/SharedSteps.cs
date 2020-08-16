@@ -20,6 +20,8 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
         [When(@"Select the Login Button")]
         public void WhenSelectTheLoginButton()
         {
+            Helper.helper help = new Helper.helper(_context);
+            help.PerformAccessabilityTest("LogIn Page");
             _context.Get<LoginPage>().SelectLogginButton();
         }
 

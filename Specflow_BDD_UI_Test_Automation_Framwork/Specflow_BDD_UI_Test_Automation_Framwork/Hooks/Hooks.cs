@@ -23,11 +23,9 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         private static AventStack.ExtentReports.ExtentReports extent;
         public static ExtentTest test;
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-        private readonly IObjectContainer _objectContainer;
-        public Hooks(ScenarioContext scenarioContext, IObjectContainer objectContainer, FeatureContext featureContext) :base(scenarioContext)
+        public Hooks(ScenarioContext scenarioContext) : base(scenarioContext)
         {
             _scenarioContext = scenarioContext;
-            _objectContainer = objectContainer;
         }
         //------------------------------------------------------------------
 
@@ -36,7 +34,6 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         {
             //Create dynamic feature name
             featureName = extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
-
         }
 
         [BeforeScenario]
@@ -125,5 +122,15 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             _scenarioContext.Get<IWebDriver>().Quit();
             _scenarioContext.Clear();
         }
+        public static void SetFeature(string Page)
+        {
+            test = extent.CreateTest<Feature>("Acceability Report for: " + Page);
+        }
+        public static void Createlogs(string message)
+        {
+            test.CreateNode<Scenario>(message).Fail("");
+        }
+
+
     }
 }

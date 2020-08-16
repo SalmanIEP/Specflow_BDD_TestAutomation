@@ -34,14 +34,16 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
         [Then(@"Select Verfiy button")]
         public void ThenSelectVerfiyButton()
         {
+            Helper.helper help = new Helper.helper(_contex);
+            help.PerformAccessabilityTest("OKta 2FA Page");
             _contex.Get<LoginPage>().SelectVerifyButton();
         }
-
-
         [Then(@"User must be Logged in to Sample Site Successfully")]
         public void ThenUserMustBeLoggedInToSampleSiteSuccessfully()
         {
             Assert.IsTrue(_contex.Get<LoginPage>().IsloggedIn(),"Unable to login to the site");
+            Helper.helper help = new Helper.helper(_contex);
+            help.PerformAccessabilityTest("Home Page");
         }
 
     }
