@@ -15,26 +15,24 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Helper
         {
             this._context = _context;
         }
-        public void PerformAccessabilityTest(String Page)
+        public void PerformAccessabilityTest(String PageName)
         {
-            Hooks.Hooks.SetFeature(Page);
-            Hooks.Hooks.Createlogs("Performing Accessabilty testing on  ......"+Page);
+            var _Driver = _context.Get<IWebDriver>();
+            Hooks.Hooks.SetFeature(PageName);
+            Hooks.Hooks.Createlogs("Performing Accessabilty testing on  ......"+PageName);
             Thread.Sleep(5000);
-            string currentPage = AccessabilityTest.AnalyzePage(_context.Get<IWebDriver>(), Page).Url;
-            var Violations = AccessabilityTest.AnalyzePage(_context.Get<IWebDriver>(), Page).Violations;
+            string currentPageName = _Driver.Url;
+            var Violations = AccessabilityTest.AnalyzePage(_Driver, PageName).Violations;
             if (Violations.Length == 0)
             {
-                Hooks.Hooks.Createlogs("No violation found on : " + currentPage);
+                Hooks.Hooks.Createlogs("No violation found on : " + currentPageName);
             }
             else
             {
-                Hooks.Hooks.Createlogs("Please find below violations on page :" + currentPage);
+                Hooks.Hooks.Createlogs("Please find below violations on PageName :" + currentPageName);
                 foreach (var violation in Violations)
                 {
                     string tag = "";
-                    string Nodes = "";
-                    string All = "";
-                    string Any = "";
                     string Html = "";
                     string json = JsonConvert.SerializeObject(Violations);
                     string Violation = "<b>Violation ID:</b> " + violation.Id + "<br/>" + "<b>Description:</b> " + violation.Description + "<br/>" + "<b>Help: </b>" + violation.Help + "<br/>" + "<b>HelpURL: </b>" + violation.HelpUrl + "<br/>" + "<b>Impact: </b>" + violation.Impact;

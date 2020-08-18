@@ -11,10 +11,9 @@ namespace Selenium.Configuration
 {
     public static class AccessabilityTest
     {
-        private static ExtentTest test;
         public static AxeResult AnalyzePage(IWebDriver driver,string Name)
         {
-            var result = new AxeBuilder(driver).Analyze();
+            var result = new AxeBuilder(driver).WithTags("wcag21aa", "wcag2aa").Analyze();
             var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
             outPutDirectory = outPutDirectory.Substring(0, outPutDirectory.IndexOf("bin"));
             outPutDirectory = outPutDirectory.Substring(outPutDirectory.IndexOf("\\") + 1);

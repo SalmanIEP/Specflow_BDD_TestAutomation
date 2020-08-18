@@ -5,6 +5,7 @@ using NUnit.Framework;
 using Selenium.Pages.MainPages;
 using Selenium.Configuration;
 using OpenQA.Selenium;
+using Specflow_BDD_UI_Test_Automation_Framwork.Helper;
 
 namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
 {
@@ -23,6 +24,8 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
             var config = ConfigurationManager.Configuration();
             var Url = config["TestEnviornmentUrl"];
             _contex.Get<IWebDriver>().Navigate().GoToUrl(Url);
+            helper help = new helper(_contex);
+            help.PerformAccessabilityTest("OKta 2FA Page");
         }
 
         [Then(@"User need to provide Valid Passcode for (.*)FA to further allowed to move to the site")]
@@ -34,7 +37,7 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
         [Then(@"Select Verfiy button")]
         public void ThenSelectVerfiyButton()
         {
-            Helper.helper help = new Helper.helper(_contex);
+            helper help = new helper(_contex);
             help.PerformAccessabilityTest("OKta 2FA Page");
             _contex.Get<LoginPage>().SelectVerifyButton();
         }
@@ -42,7 +45,7 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
         public void ThenUserMustBeLoggedInToSampleSiteSuccessfully()
         {
             Assert.IsTrue(_contex.Get<LoginPage>().IsloggedIn(),"Unable to login to the site");
-            Helper.helper help = new Helper.helper(_contex);
+            helper help = new helper(_contex);
             help.PerformAccessabilityTest("Home Page");
         }
 
