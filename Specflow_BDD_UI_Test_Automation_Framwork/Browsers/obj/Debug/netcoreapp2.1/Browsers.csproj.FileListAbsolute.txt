@@ -1,0 +1,6 @@
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\bin\Debug\netcoreapp2.1\Browsers.deps.json
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\bin\Debug\netcoreapp2.1\Browsers.dll
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\obj\Debug\netcoreapp2.1\Browsers.csproj.CoreCompileInputs.cache
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\obj\Debug\netcoreapp2.1\Browsers.AssemblyInfoInputs.cache
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\obj\Debug\netcoreapp2.1\Browsers.AssemblyInfo.cs
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Browsers\obj\Debug\netcoreapp2.1\Browsers.csprojAssemblyReference.cache

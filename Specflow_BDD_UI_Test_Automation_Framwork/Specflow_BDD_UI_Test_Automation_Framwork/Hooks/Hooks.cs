@@ -1,6 +1,6 @@
 ﻿using Selenium.Intilaizer;
 using System;
-using Selenium.Support.Extensions;
+using Selenium.Support;
 using TechTalk.SpecFlow;
 using Selenium.Configuration;
 using OpenQA.Selenium;
@@ -11,6 +11,8 @@ using System.IO;
 using AventStack.ExtentReports.Reporter;
 using System.Reflection;
 using Selenium.Support;
+using Selenium.Support.Browser;
+using System.Diagnostics;
 
 namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
 {
@@ -18,36 +20,43 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
     public sealed class Hooks : Pages
     {
         private readonly ScenarioContext _scenarioContext;
+        private readonly FeatureContext _feature;
+        [ThreadStatic]
         private static ExtentTest featureName;
+        [ThreadStatic]
         private static ExtentTest scenario;
         private static AventStack.ExtentReports.ExtentReports extent;
+        [ThreadStatic]
         public static ExtentTest test;
+
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
         public Hooks(ScenarioContext scenarioContext) : base(scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }
+
         //------------------------------------------------------------------
 
         [BeforeFeature]
-        public static void BeforeFeature()
+        public static void BeforeFeature(FeatureContext featureContext)
         {
             //Create dynamic feature name
-            featureName = extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
+            Debugger.Launch();
+            featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
         }
 
         [BeforeScenario]
-        public void BeforeScenario()
+        public void BeforeScenario(ScenarioContext scenarioContext)
         {
-            scenario = featureName.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
+            scenario = featureName.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             var config = ConfigurationManager.Configuration();
             var isRemote = config["IsRemoteDriver"];
             if (config["Is2FEnabled"].Equals("true"))
             {
                 _scenarioContext.Add("2FAPassCode", _2FAuthentication.GetGoogleAuthenticationPassCode());
             }
-            DriverFactory factory = new DriverFactory(_scenarioContext);
-            factory.Init(Browsers.Chrome, bool.Parse(isRemote));
+            BrowserDriverFactory factory = new BrowserDriverFactory(_scenarioContext);
+            factory.CreateWebDriver(TestSetting.Options);
             InitPages();
         }
         [BeforeTestRun]
@@ -66,48 +75,48 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             extent.AttachReporter(htmlReporter);
         }
         [AfterStep]
-        public void InsertReportingSteps()
+        public void InsertReportingSteps(ScenarioContext scenarioContext)
         {
 
 
-            var stepType = ScenarioStepContext.Current.StepInfo.StepDefinitionType.ToString();
+            var stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
             PropertyInfo pInfo = typeof(ScenarioContext).GetProperty("ScenarioExecutionStatus", BindingFlags.Instance | BindingFlags.Public);
             MethodInfo getter = pInfo.GetGetMethod(nonPublic: true);
-            object TestResult = getter.Invoke(ScenarioContext.Current, null);
+            object TestResult = getter.Invoke(scenarioContext, null);
             //Pass status
-            if (ScenarioContext.Current.TestError == null)
+            if (scenarioContext.TestError == null)
             {
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text);
+                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text);
                 else if (stepType == "When")
-                    scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text);
+                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text);
                 else if (stepType == "Then")
-                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text);
+                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text);
                 else if (stepType == "And")
-                    scenario.CreateNode<And>(ScenarioStepContext.Current.StepInfo.Text);
+                    scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text);
             }
             //Failure Staus
-            if (ScenarioContext.Current.TestError != null)
+            if (scenarioContext.TestError != null)
             {
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
+                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
                 else if (stepType == "When")
-                    scenario.CreateNode<When>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
+                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
                 else if (stepType == "Then")
-                    scenario.CreateNode<Then>(ScenarioStepContext.Current.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
             }
 
             //Pending Status
             if (TestResult.ToString() == "StepDefinitionPending")
             {
                 if (stepType == "Given")
-                    ScenarioContext.Current.Pending();
+                    scenarioContext.Pending();
                 else if (stepType == "When")
-                    ScenarioContext.Current.Pending();
+                    scenarioContext.Pending();
                 else if (stepType == "Then")
-                    ScenarioContext.Current.Pending();
+                    scenarioContext.Pending();
                 else if (stepType == "And")
-                    ScenarioContext.Current.Pending();
+                    scenarioContext.Pending();
 
             }
         }

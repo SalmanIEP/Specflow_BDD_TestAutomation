@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using OpenQA.Selenium;
 using Selenium.Configuration;
 using TechTalk.SpecFlow;
+using Selenium.Elements;
 
 
 namespace Selenium.Pages.MainPages
@@ -19,29 +20,25 @@ namespace Selenium.Pages.MainPages
             this.context = context;
             
         }
-        By Txt_Email = By.Id("okta-signin-username");
-        By Txt_Password = By.Id("okta-signin-password");
-        By Btn_LogIn = By.Id("okta-signin-submit");
-        By Txt_PassCode = By.Name("answer");
-        By Btn_Verify = By.XPath("//*[contains(@value,'Verify')]");
-
         public void EnterLoginDetail(string email, string password)
         {
-           type(email,Txt_Email);
-           type(password, Txt_Password);
+
+           type(email,By.Id(elements.ID[Reference.LogInPage.EmailTextFeild]));
+           type(password, By.Id(elements.ID[Reference.LogInPage.PasswordTextFeild]));
         }
 
         public void Enter2FAPasscode()
         {
-            type(context.Get<string>("2FAPassCode"), Txt_PassCode);
+            Thread.Sleep(2000);
+            type(context.Get<string>("2FAPassCode"), By.Name(elements.Name[Reference.TwoFactorAuthenticationPage.PassCodeTextFeild]));
         }
         public void SelectLogginButton()
         {
-            click(Btn_LogIn);
+            click(By.Id(elements.ID[Reference.LogInPage.ButtonLogIn]));
         }
         public void SelectVerifyButton()
         {
-            click(Btn_Verify);
+            click(By.XPath(elements.Xpath[Reference.TwoFactorAuthenticationPage.ButtonVerify]));
             Thread.Sleep(5000);
         }
 

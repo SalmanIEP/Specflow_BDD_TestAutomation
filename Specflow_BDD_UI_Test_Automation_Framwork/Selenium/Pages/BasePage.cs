@@ -5,6 +5,7 @@ using System.Text;
 using TechTalk.SpecFlow;
 using Selenium.Intilaizer;
 using Selenium.Configuration;
+using Selenium.Support.Extensions;
 
 namespace Selenium.Pages
 {
@@ -20,9 +21,10 @@ namespace Selenium.Pages
         {
             find(locator).SendKeys(inputText);
         }
+       
         public IWebElement find(By locator)
         {
-            var driver = _context.Get<IWebDriver>();
+           var driver = _context.Get<IWebDriver>();
             return driver.FindElement(locator);
         }
 
