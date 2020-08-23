@@ -99,11 +99,11 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             if (scenarioContext.TestError != null)
             {
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
+                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
                 else if (stepType == "When")
-                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.InnerException);
+                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
                 else if (stepType == "Then")
-                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(ScenarioContext.Current.TestError.Message);
+                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
             }
 
             //Pending Status

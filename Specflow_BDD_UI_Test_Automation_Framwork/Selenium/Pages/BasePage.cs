@@ -25,6 +25,7 @@ namespace Selenium.Pages
         public IWebElement find(By locator)
         {
            var driver = _context.Get<IWebDriver>();
+            driver.WaitUntilAvailable(locator);
             return driver.FindElement(locator);
         }
 

@@ -29,7 +29,7 @@ namespace Selenium.Pages.MainPages
 
         public void Enter2FAPasscode()
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);  
             type(context.Get<string>("2FAPassCode"), By.Name(elements.Name[Reference.TwoFactorAuthenticationPage.PassCodeTextFeild]));
         }
         public void SelectLogginButton()

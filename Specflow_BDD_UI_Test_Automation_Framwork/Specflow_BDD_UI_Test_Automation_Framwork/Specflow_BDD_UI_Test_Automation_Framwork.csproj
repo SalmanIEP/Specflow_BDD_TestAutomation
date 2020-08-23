@@ -32,6 +32,9 @@
     <Compile Update="Hooks\Hooks.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Steps Defination\parallel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Steps Defination\SharedSteps.cs">
       <SubType>Code</SubType>
     </Compile>
