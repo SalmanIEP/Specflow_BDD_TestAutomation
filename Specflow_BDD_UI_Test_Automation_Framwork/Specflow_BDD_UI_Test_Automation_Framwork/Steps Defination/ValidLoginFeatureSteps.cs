@@ -12,6 +12,7 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
     [Binding]
     public class ValidLoginFeatureSteps
     {
+
         private readonly ScenarioContext _contex;
         public ValidLoginFeatureSteps(ScenarioContext _contex)
         {

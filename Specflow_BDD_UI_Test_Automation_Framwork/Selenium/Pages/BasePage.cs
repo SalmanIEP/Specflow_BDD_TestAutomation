@@ -19,6 +19,7 @@ namespace Selenium.Pages
         }
         public void type(String inputText, By locator)
         {
+            find(locator).Clear();
             find(locator).SendKeys(inputText);
         }
        

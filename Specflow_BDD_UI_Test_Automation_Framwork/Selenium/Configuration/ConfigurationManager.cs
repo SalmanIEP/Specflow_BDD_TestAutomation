@@ -9,6 +9,11 @@ namespace Selenium.Configuration
 {
     public class ConfigurationManager
     {
+        /// <summary>
+        /// This method will return the configuration for the project store in appsetting.json file 
+        /// which can used futher in test project
+        /// </summary>
+        /// <returns></returns>
         public static IConfiguration Configuration()
         {
             string Path = "appsettings.json";
@@ -18,7 +23,11 @@ namespace Selenium.Configuration
                 .Build();
             return config;
         }
-
+        /// <summary>
+        /// This method will use to encode the string in UTF8 which can b
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static string EncodePasswordToBase64(string password)
         {
             try
@@ -33,7 +42,11 @@ namespace Selenium.Configuration
                 throw new Exception("Error in base64Encode" + ex.Message);
             }
         }
-
+        /// <summary>
+        /// This method will used to decode the string
+        /// </summary>
+        /// <param name="encodedData"></param>
+        /// <returns></returns>
         public static string DecodePassword(string encodedData)
         {
             System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();

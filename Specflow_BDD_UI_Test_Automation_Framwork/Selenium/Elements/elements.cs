@@ -4,8 +4,14 @@ using System.Text;
 
 namespace Selenium.Elements
 {
+    /// <summary>
+    /// This elements class contains the dictionary for all application selectors like id , css selectors etc
+    /// </summary>
     public static class elements
     {
+        /// <summary>
+        /// Elements Xpath's Dictionary 
+        /// </summary>
         public static Dictionary<string, string> Xpath = new Dictionary<string, string>()
         {
             //2FA Authentication Page 
@@ -13,9 +19,11 @@ namespace Selenium.Elements
 
             //login
 
-
+            // home
         };
-
+        /// <summary>
+        /// Elements ID's Dictionary
+        /// </summary>
         public static Dictionary<string, string> ID = new Dictionary<string, string>()
         {
             //LogInPage
@@ -23,7 +31,9 @@ namespace Selenium.Elements
             { "Txt_Password" , "okta-signin-password"},
             { "Btn_LogIn", "okta-signin-submit"},
         };
-
+        /// <summary>
+        /// Elements Css Selectors Dictionary
+        /// </summary>
         public static Dictionary<string, string> Css = new Dictionary<string, string>()
         {
             //DumyPage
@@ -33,6 +43,9 @@ namespace Selenium.Elements
             { "BPF_PreviousStage", "id(\"stageBackActionContainer\")/div"}
 
         };
+        /// <summary>
+        /// Elements Class Disctionary 
+        /// </summary>
         public static Dictionary<string, string> Class = new Dictionary<string, string>()
         {
 
@@ -42,6 +55,10 @@ namespace Selenium.Elements
             { "BPF_PreviousStage", "id(\"stageBackActionContainer\")/div"}
 
         };
+
+        /// <summary>
+        /// Elements Name dictionary 
+        /// </summary>
         public static Dictionary<string, string> Name = new Dictionary<string, string>()
         {
 
@@ -51,6 +68,9 @@ namespace Selenium.Elements
 
         
     }
+    /// <summary>
+    /// This Class contains References for all pages elements like login page.. etc 
+    /// </summary>
     public static class Reference
     {
         public static class LogInPage

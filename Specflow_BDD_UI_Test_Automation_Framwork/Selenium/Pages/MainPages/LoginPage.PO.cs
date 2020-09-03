@@ -20,9 +20,13 @@ namespace Selenium.Pages.MainPages
             this.context = context;
             
         }
+        /// <summary>
+        /// This method is used to get looged in to the site 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
         public void EnterLoginDetail(string email, string password)
         {
-
            type(email,By.Id(elements.ID[Reference.LogInPage.EmailTextFeild]));
            type(password, By.Id(elements.ID[Reference.LogInPage.PasswordTextFeild]));
         }

@@ -15,6 +15,11 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Helper
         {
             this._context = _context;
         }
+
+        /// <summary>
+        /// This method will perform accessability test on the drive page
+        /// </summary>
+        /// <param name="PageName"></param>
         public void PerformAccessabilityTest(String PageName)
         {
             var _Driver = _context.Get<IWebDriver>();

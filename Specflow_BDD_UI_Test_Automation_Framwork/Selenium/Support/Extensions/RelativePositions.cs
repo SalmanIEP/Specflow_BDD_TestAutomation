@@ -4,6 +4,9 @@ using OpenQA.Selenium;
 
 namespace Selenium.Support.Extensions
 {
+    /// <summary>
+    /// This class contains extentions method to get the Relative positions of the elements
+    /// </summary>
     public static class RelativePositions
     {
         public static Func<Point> Above(this IWebElement outer, IWebElement inner) =>

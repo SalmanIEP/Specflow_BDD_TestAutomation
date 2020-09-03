@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Selenium.Support.Extensions
 {
+    /// <summary>
+    /// This class contains all dictionary Extensions
+    /// </summary>
     public static class DictionaryExtensions
     {
         

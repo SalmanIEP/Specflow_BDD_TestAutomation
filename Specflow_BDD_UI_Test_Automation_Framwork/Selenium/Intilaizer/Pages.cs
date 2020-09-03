@@ -14,7 +14,10 @@ namespace Selenium.Intilaizer
         {
             this.context = context;
         }
-
+        /// <summary>
+        /// This Method will Intialize the pages classes and add into the scenrio context
+        /// you can add all your project pages classes in to this method
+        /// </summary>
         public void InitPages()
         {
             context.Set(new LoginPage(context));

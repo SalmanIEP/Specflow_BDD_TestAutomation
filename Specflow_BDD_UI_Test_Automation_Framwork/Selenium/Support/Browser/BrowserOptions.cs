@@ -8,8 +8,12 @@ using System.IO;
 
 namespace Selenium.Support.Browser
 {
+    /// <summary>
+    /// All Browser options are declare here which you define in testsetting file.
+    /// </summary>
     public class BrowserOptions
     {
+
         public BrowserOptions()
         {
             this.DriversPath = Path.Combine(Directory.GetCurrentDirectory()); //, @"Drivers\");
