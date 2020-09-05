@@ -10,7 +10,6 @@ using AventStack.ExtentReports.Gherkin.Model;
 using System.IO;
 using AventStack.ExtentReports.Reporter;
 using System.Reflection;
-using Selenium.Support;
 using Selenium.Support.Browser;
 using System.Diagnostics;
 
@@ -20,7 +19,6 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
     public sealed class Hooks : Pages
     {
         private readonly ScenarioContext _scenarioContext;
-        private readonly FeatureContext _feature;
         [ThreadStatic]
         private static ExtentTest featureName;
         [ThreadStatic]

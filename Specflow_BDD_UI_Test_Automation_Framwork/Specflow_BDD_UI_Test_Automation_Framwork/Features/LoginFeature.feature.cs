@@ -75,7 +75,7 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1 Login With Valid Credintials using Okta Verify Factor")]
-        [NUnit.Framework.TestCaseAttribute("salmanarshad@humanfocus.co.uk", "Iep@1234567", null)]
+        [NUnit.Framework.TestCaseAttribute("your okta email address", "*********", null)]
         public virtual void _1LoginWithValidCredintialsUsingOktaVerifyFactor(string email, string password, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Selenium.Elements
 {
+  
     /// <summary>
     /// This elements class contains the dictionary for all application selectors like id , css selectors etc
     /// </summary>
@@ -30,6 +31,8 @@ namespace Selenium.Elements
             { "Txt_Email", "okta-signin-username"},
             { "Txt_Password" , "okta-signin-password"},
             { "Btn_LogIn", "okta-signin-submit"},
+
+
         };
         /// <summary>
         /// Elements Css Selectors Dictionary
@@ -65,8 +68,8 @@ namespace Selenium.Elements
             { "Txt_PassCode" , "answer"}
 
         };
+       
 
-        
     }
     /// <summary>
     /// This Class contains References for all pages elements like login page.. etc 
@@ -86,8 +89,11 @@ namespace Selenium.Elements
             public static string PassCodeTextFeild = "Txt_PassCode";
             public static string ButtonVerify = "Btn_Verify";
         }
-
-
+        
+        public static class Navigation
+        {
+            public static string NavItem(string navigation) { return "//a[text()="+ navigation+ "]"; }
+        }
 
     }
 }

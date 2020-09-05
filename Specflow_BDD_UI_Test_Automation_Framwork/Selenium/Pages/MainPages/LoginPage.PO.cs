@@ -42,6 +42,8 @@ namespace Selenium.Pages.MainPages
         }
         public void SelectVerifyButton()
         {
+           
+            click(By.XPath(Reference.Navigation.NavItem("Home")));
             click(By.XPath(elements.Xpath[Reference.TwoFactorAuthenticationPage.ButtonVerify]));
             Thread.Sleep(5000);
         }
