@@ -58,16 +58,25 @@ namespace Selenium.Support.Browser
                     break;
                 case BrowserType.Remote:
                     ICapabilities capabilities = null;
+                    ChromeOptions option = new ChromeOptions();
                     switch (options.RemoteBrowserType)
                     {
                         case BrowserType.Chrome:
-                            capabilities = options.ToChrome().ToCapabilities();
+                            
+                            option.AddAdditionalCapability("os", options.os.ToString(),true);
+                            option.AddAdditionalCapability("os_version", options.os_version.ToString(),true);
+                            option.AddAdditionalCapability("browser_version", options.browser_version.ToString(), true);
+                            option.AddAdditionalCapability("browserstack.user", options.browserstackuser.ToString(), true);
+                            option.AddAdditionalCapability("browserstack.key", options.browserstackkey.ToString(), true);
+                            option.AddAdditionalCapability("name", "FirstTest",true);
+                            option.AddAdditionalCapability("browser",options.RemoteBrowserType.ToString(), true);
+                            capabilities = option.ToCapabilities();
                             break;
                         case BrowserType.Firefox:
                             capabilities = options.ToFireFox().ToCapabilities();
                             break;
                     }
-                    driver = new RemoteWebDriver(options.RemoteHubServer, capabilities, TimeSpan.FromMinutes(20));
+                    driver = new RemoteWebDriver(options.RemoteHubServer, option);
                     context.Set(driver);
                     break;
                 default:

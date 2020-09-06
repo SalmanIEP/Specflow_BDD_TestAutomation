@@ -13,9 +13,11 @@ namespace Selenium.Pages
     public abstract class BasePage
     {
         public readonly ScenarioContext _context;
+        IWebDriver driver;
         public BasePage(ScenarioContext _context)
         {
             this._context = _context;
+            driver = _context.Get<IWebDriver>();
         }
         public void type(String inputText, By locator)
         {
@@ -25,13 +27,15 @@ namespace Selenium.Pages
        
         public IWebElement find(By locator)
         {
-           var driver = _context.Get<IWebDriver>();
+         
             driver.WaitUntilAvailable(locator);
+            
             return driver.FindElement(locator);
         }
 
         public void click(By locator)
         {
+            driver.WaitUntilClickable(locator, TimeSpan.FromSeconds(20),"Element is not clickable",);
             find(locator).Click();
         }
 

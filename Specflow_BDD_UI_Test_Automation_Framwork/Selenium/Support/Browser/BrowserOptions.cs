@@ -53,6 +53,16 @@ namespace Selenium.Support.Browser
         public string DriversPath { get; set; }
         public string DownloadsPath { get; set; }
         public bool PrivateMode { get; set; }
+        /// Browser Stack Setting
+        public string os_version { get; set; }
+        public string resolution { get; set; }
+        public string browser_version { get; set; }
+        public string os { get; set; }
+        public string browserstackuser { get; set; }
+        public string browserstackkey { get; set; }
+
+
+        ////////////////////////////////////////
         public bool CleanSession { get; set; }
         public TimeSpan PageLoadTimeout { get; set; }
         public TimeSpan CommandTimeout { get; set; }
@@ -203,6 +213,8 @@ namespace Selenium.Support.Browser
                 options.AddUserProfilePreference("download.default_directory", DownloadsPath);
             }
 
+            options.AcceptInsecureCertificates = true;
+           
             return options;
         }
 

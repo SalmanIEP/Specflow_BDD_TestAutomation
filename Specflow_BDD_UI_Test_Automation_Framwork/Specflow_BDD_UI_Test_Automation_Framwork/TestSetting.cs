@@ -17,7 +17,8 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork
         private static readonly string RemoteHubServerURL = config["RemoteHubServer"];
         private static readonly string DriversPath = config["DriversPath"] ?? string.Empty;
         private static readonly bool UsePrivateMode = Convert.ToBoolean(config["UsePrivateMode"] ?? bool.TrueString);
-
+        private static readonly string browserstack_user = config["browserstack.user"];
+        private static readonly string browserstack_Key = config["browserstack.key"];
         // Create a new options instance, copy of the share, to use just in the current test, modifications in test will not affect other tests
         public static BrowserOptions Options => new BrowserOptions
         {
@@ -42,7 +43,15 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork
             DisableImplSidePainting = false,
             DisableDevShmUsage = false,
             DisableInfoBars = false,
-            TestTypeBrowser = false
+            TestTypeBrowser = false,
+            RemoteHubServer= new Uri(RemoteHubServerURL),
+            browserstackkey=browserstack_Key,
+            browserstackuser=browserstack_user,
+            os= "Windows",
+            os_version= "10",
+            browser_version= "85.0",
+            RemoteBrowserType = (BrowserType)Enum.Parse(typeof(BrowserType), RemoteType),
+            
         };
     }
 }
