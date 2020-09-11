@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using Selenium.Configuration;
 using TechTalk.SpecFlow;
 using Selenium.Elements;
-
+using Selenium.Support.Browser;
 
 namespace Selenium.Pages.MainPages
 {
@@ -27,31 +27,31 @@ namespace Selenium.Pages.MainPages
         /// <param name="password"></param>
         public void EnterLoginDetail(string email, string password)
         {
-           type(email,By.Id(elements.ID[Reference.LogInPage.EmailTextFeild]));
-           type(password, By.Id(elements.ID[Reference.LogInPage.PasswordTextFeild]));
+           type(email,By.Id(Elements.Elements.ID[Reference.LogInPage.EmailTextFeild]));
+           type(password, By.Id(Elements.Elements.ID[Reference.LogInPage.PasswordTextFeild]));
         }
 
         public void Enter2FAPasscode()
         {
             Thread.Sleep(3000);  
-            type(context.Get<string>("2FAPassCode"), By.Name(elements.Name[Reference.TwoFactorAuthenticationPage.PassCodeTextFeild]));
+            type(context.Get<string>("2FAPassCode"), By.Name(Elements.Elements.Name[Reference.TwoFactorAuthenticationPage.PassCodeTextFeild]));
         }
         public void SelectLogginButton()
         {
-            click(By.Id(elements.ID[Reference.LogInPage.ButtonLogIn]));
+            click(By.Id(Elements.Elements.ID[Reference.LogInPage.ButtonLogIn]));
         }
         public void SelectVerifyButton()
         {
            
             click(By.XPath(Reference.Navigation.NavItem("Home")));
-            click(By.XPath(elements.Xpath[Reference.TwoFactorAuthenticationPage.ButtonVerify]));
+            click(By.XPath(Elements.Elements.Xpath[Reference.TwoFactorAuthenticationPage.ButtonVerify]));
             Thread.Sleep(5000);
         }
 
         public bool IsloggedIn()
         {
             bool Loggedin = false;
-            if (_context.Get<IWebDriver>().Url.Contains("admin/getting-started"))
+            if (BrowserDriverFactory.driver.Url.Contains("admin/getting-started"))
             {
                 Loggedin = true;
             }

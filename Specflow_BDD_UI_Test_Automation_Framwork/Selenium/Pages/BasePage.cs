@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 using Selenium.Intilaizer;
 using Selenium.Configuration;
 using Selenium.Support.Extensions;
+using Selenium.Support.Browser;
 
 namespace Selenium.Pages
 {
@@ -17,7 +18,7 @@ namespace Selenium.Pages
         public BasePage(ScenarioContext _context)
         {
             this._context = _context;
-            driver = _context.Get<IWebDriver>();
+            driver = BrowserDriverFactory.driver;
         }
         public void type(String inputText, By locator)
         {
@@ -35,7 +36,7 @@ namespace Selenium.Pages
 
         public void click(By locator)
         {
-            driver.WaitUntilClickable(locator, TimeSpan.FromSeconds(20),"Element is not clickable",);
+            driver.WaitUntilClickable(locator, TimeSpan.FromSeconds(20),"Element is not clickable");
             find(locator).Click();
         }
 

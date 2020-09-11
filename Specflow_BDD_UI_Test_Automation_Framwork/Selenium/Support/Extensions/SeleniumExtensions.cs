@@ -250,7 +250,7 @@ namespace Selenium.Support.Extensions
 
 
         /// <summary>
-        /// Clears the focus from all elements.
+        /// Clears the focus from all Elements.
         /// TODO: this implementation of the ClearFocus is clicking somewhere on the body, that may happen in some unwanted point, changing the results of the test.
         /// Clicking on the label of the current control may have a better result.
         /// </summary>
@@ -366,14 +366,14 @@ namespace Selenium.Support.Extensions
 
         public static IWebElement FindAvailable(this ISearchContext driver, By locator)
         {
-            ReadOnlyCollection<IWebElement> elements = driver.FindElements(locator);
-            int? count = elements?.Count;
+            ReadOnlyCollection<IWebElement> Elements = driver.FindElements(locator);
+            int? count = Elements?.Count;
             if (count == null || count == 0)
                 return null;
 
             var result = count > 1
-                ? elements.FirstOrDefault(x => x?.Displayed == true)
-                : elements.First(x => x != null);
+                ? Elements.FirstOrDefault(x => x?.Displayed == true)
+                : Elements.First(x => x != null);
 
             return result;
         }
@@ -384,8 +384,8 @@ namespace Selenium.Support.Extensions
 
         public static bool IsVisible(this ISearchContext driver, By locator)
         {
-            ReadOnlyCollection<IWebElement> elements = driver.FindElements(locator);
-            bool result = elements.Any(IsVisible);
+            ReadOnlyCollection<IWebElement> Elements = driver.FindElements(locator);
+            bool result = Elements.Any(IsVisible);
             return result;
         }
 
@@ -398,23 +398,23 @@ namespace Selenium.Support.Extensions
 
         public static IWebElement FindVisible(this ISearchContext driver, By locator)
         {
-            ReadOnlyCollection<IWebElement> elements = driver.FindElements(locator);
-            IWebElement result = elements.FirstOrDefault(IsVisible);
+            ReadOnlyCollection<IWebElement> Elements = driver.FindElements(locator);
+            IWebElement result = Elements.FirstOrDefault(IsVisible);
             return result;
         }
 
         public static IWebElement FindClickable(this ISearchContext driver, By locator)
         {
-            ReadOnlyCollection<IWebElement> elements = driver.FindElements(locator);
-            IWebElement result = elements.FirstOrDefault(IsClickable);
+            ReadOnlyCollection<IWebElement> Elements = driver.FindElements(locator);
+            IWebElement result = Elements.FirstOrDefault(IsClickable);
             return result;
         }
 
         public static bool TryFindElement(this ISearchContext context, By by, out IWebElement element)
         {
-            var elements = context.FindElements(by);
-            var success = elements.Count > 0;
-            element = success ? elements[0] : null;
+            var Elements = context.FindElements(by);
+            var success = Elements.Count > 0;
+            element = success ? Elements[0] : null;
             return success;
         }
 
@@ -559,20 +559,20 @@ namespace Selenium.Support.Extensions
             TimeSpan? timeout = null,
             Action<ICollection<IWebElement>> successCallback = null, Action failureCallback = null)
         {
-            ICollection<IWebElement> elements = null;
+            ICollection<IWebElement> Elements = null;
             Predicate<ISearchContext> condition = d =>
             {
-                elements = searchFunc(d);
-                return elements != null && elements.Count > 0;
+                Elements = searchFunc(d);
+                return Elements != null && Elements.Count > 0;
             };
 
             bool success = driver.WaitUntil(condition);
             if (success)
-                successCallback?.Invoke(elements);
+                successCallback?.Invoke(Elements);
             else
                 failureCallback?.Invoke();
 
-            return elements;
+            return Elements;
         }
 
         public static bool RepeatUntil(this IWebDriver driver, Action action, Predicate<IWebDriver> predicate,

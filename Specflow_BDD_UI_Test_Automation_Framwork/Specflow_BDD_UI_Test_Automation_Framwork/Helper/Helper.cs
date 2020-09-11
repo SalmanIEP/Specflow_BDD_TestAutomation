@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using OpenQA.Selenium;
 using Selenium.Configuration;
+using Selenium.Support.Browser;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +12,11 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Helper
    public class helper
     {
         ScenarioContext _context;
+        IWebDriver driver;
         public helper(ScenarioContext _context)
         {
             this._context = _context;
+            driver = BrowserDriverFactory.driver;
         }
 
         /// <summary>
@@ -22,7 +25,7 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Helper
         /// <param name="PageName"></param>
         public void PerformAccessabilityTest(String PageName)
         {
-            var _Driver = _context.Get<IWebDriver>();
+            var _Driver = driver;
             Hooks.Hooks.SetFeature(PageName);
             Hooks.Hooks.Createlogs("Performing Accessabilty testing on  ......"+PageName);
             Thread.Sleep(5000);

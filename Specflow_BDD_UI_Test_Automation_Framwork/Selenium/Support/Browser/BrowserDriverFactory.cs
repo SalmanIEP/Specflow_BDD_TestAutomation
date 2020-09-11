@@ -19,7 +19,7 @@ namespace Selenium.Support.Browser
         {
             this.context = context;
         }
-
+        public static IWebDriver driver;
         /// <summary>
         /// This method will a launch a browser with option that you can set in testsetting file in your test project
         /// </summary>
@@ -27,7 +27,6 @@ namespace Selenium.Support.Browser
         /// <returns></returns>
         public IWebDriver CreateWebDriver(BrowserOptions options)
         {
-            IWebDriver driver;
 
             switch (options.BrowserType)
             {

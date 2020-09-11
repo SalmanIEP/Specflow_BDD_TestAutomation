@@ -39,8 +39,14 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         public static void BeforeFeature(FeatureContext featureContext)
         {
             //Create dynamic feature name
-            Debugger.Launch();
             featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
+        }
+
+        [AfterFeature]
+        public static void AfterFeature()
+        {
+           BrowserDriverFactory.driver.Quit();
+           BrowserDriverFactory.driver = null;
         }
 
         [BeforeScenario]
@@ -49,13 +55,28 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             scenario = featureName.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             var config = ConfigurationManager.Configuration();
             var isRemote = config["IsRemoteDriver"];
+            var NewInstance = config["NewInstanceofBrowserForeachScenario"];
             if (config["Is2FEnabled"].Equals("true"))
             {
                 _scenarioContext.Add("2FAPassCode", _2FAuthentication.GetGoogleAuthenticationPassCode());
             }
-            BrowserDriverFactory factory = new BrowserDriverFactory(_scenarioContext);
-            factory.CreateWebDriver(TestSetting.Options);
-            InitPages();
+            if (NewInstance.Equals("false"))
+            {
+                if (BrowserDriverFactory.driver == null)
+                {
+                    BrowserDriverFactory factory = new BrowserDriverFactory(_scenarioContext);
+                    factory.CreateWebDriver(TestSetting.Options);
+                    InitPages();
+                }
+                InitPages();
+            }
+            else
+            {
+                BrowserDriverFactory factory = new BrowserDriverFactory(_scenarioContext);
+                factory.CreateWebDriver(TestSetting.Options);
+                InitPages();
+            }
+            
         }
         [BeforeTestRun]
         public static void InitializeReport()
@@ -96,12 +117,28 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             //Failure Staus
             if (scenarioContext.TestError != null)
             {
-                if (stepType == "Given")
-                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                else if (stepType == "When")
-                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                else if (stepType == "Then")
-                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                if (scenarioContext.TestError.InnerException == null)
+                {
+                    if (stepType == "Given")
+                        scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                    else if (stepType == "When")
+                        scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                    else if (stepType == "And")
+                        scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                    else if (stepType == "Then")
+                        scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
+                }
+                else
+                {
+                    if (stepType == "Given")
+                        scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
+                    else if (stepType == "When")
+                        scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
+                    else if (stepType == "And")
+                        scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
+                    else if (stepType == "Then")
+                        scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
+                }
             }
 
             //Pending Status
@@ -126,8 +163,14 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            _scenarioContext.Get<IWebDriver>().Quit();
-            _scenarioContext.Clear();
+            var config = ConfigurationManager.Configuration();
+            var NewInstance = config["NewInstanceofBrowserForeachScenario"];
+            if (NewInstance.Equals("true"))
+            {
+                _scenarioContext.Get<IWebDriver>().Quit();
+                _scenarioContext.Clear();
+            }
+           
         }
         public static void SetFeature(string Page)
         {

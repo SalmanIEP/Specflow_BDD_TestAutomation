@@ -59,7 +59,7 @@ namespace Selenium.Support.Extensions
             }
         }
         /// <summary>
-        ///     Gets the specified elements class attribute.
+        ///     Gets the specified Elements class attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The class attribute value</returns>
@@ -76,7 +76,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements name attribute.
+        ///     Gets the specified Elements name attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The name attribute value</returns>
@@ -93,7 +93,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements id attribute.
+        ///     Gets the specified Elements id attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The id attribute value</returns>
@@ -110,7 +110,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements style attribute.
+        ///     Gets the specified Elements style attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The style attribute value</returns>
@@ -127,7 +127,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements value attribute.
+        ///     Gets the specified Elements value attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The value attribute</returns>
@@ -144,7 +144,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements type attribute.
+        ///     Gets the specified Elements type attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The type attribute value</returns>
@@ -161,7 +161,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements title attribute.
+        ///     Gets the specified Elements title attribute.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The title attribute value</returns>
@@ -178,7 +178,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements parent element.
+        ///     Gets the specified Elements parent element.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The parent element</returns>
@@ -188,7 +188,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the specified elements child element.
+        ///     Gets the specified Elements child element.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The child element</returns>
@@ -198,7 +198,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the preceding elements sibling.
+        ///     Gets the preceding Elements sibling.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns></returns>
@@ -208,7 +208,7 @@ namespace Selenium.Support.Extensions
         }
 
         /// <summary>
-        ///     Gets the following elements sibling.
+        ///     Gets the following Elements sibling.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns></returns>
@@ -220,13 +220,13 @@ namespace Selenium.Support.Extensions
        
 
         /// <summary>
-        ///     Gets the children elements of the specified type.
+        ///     Gets the children Elements of the specified type.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <param name="elementType">Type of the element.</param>
         /// <returns></returns>
         /// <summary>
-        ///     Gets the children elements by.
+        ///     Gets the children Elements by.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <param name="locator">The locator.</param>

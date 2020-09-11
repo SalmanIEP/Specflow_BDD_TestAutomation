@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 namespace Selenium.Support.Extensions
 {
     /// <summary>
-    /// This class contains extentions method to get the Relative positions of the elements
+    /// This class contains extentions method to get the Relative positions of the Elements
     /// </summary>
     public static class RelativePositions
     {

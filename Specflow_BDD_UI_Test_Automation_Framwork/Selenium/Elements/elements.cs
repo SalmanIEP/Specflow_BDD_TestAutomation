@@ -6,9 +6,9 @@ namespace Selenium.Elements
 {
   
     /// <summary>
-    /// This elements class contains the dictionary for all application selectors like id , css selectors etc
+    /// This Elements class contains the dictionary for all application selectors like id , css selectors etc
     /// </summary>
-    public static class elements
+    public static class Elements
     {
         /// <summary>
         /// Elements Xpath's Dictionary 
@@ -72,7 +72,7 @@ namespace Selenium.Elements
 
     }
     /// <summary>
-    /// This Class contains References for all pages elements like login page.. etc 
+    /// This Class contains References for all pages Elements like login page.. etc 
     /// </summary>
     public static class Reference
     {

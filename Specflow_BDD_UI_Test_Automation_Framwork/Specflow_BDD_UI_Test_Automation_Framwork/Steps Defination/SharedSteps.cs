@@ -31,5 +31,24 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
         {
             _context.Get<LoginPage>().EnterLoginDetail(email, password);
         }
+
+        [Given(@"i will consume this service")]
+        public void GivenIWillConsumeThisService()
+        {
+            Console.WriteLine("consume this service");
+        }
+
+        [Given(@"i will call this method")]
+        public void GivenIWillCallThisMethod()
+        {
+            Console.WriteLine("Call this method");
+        }
+
+        [Given(@"i will not involve in this")]
+        public void GivenIWillNotInvolveInThis()
+        {
+            Console.WriteLine("Not involve");
+        }
+
     }
 }

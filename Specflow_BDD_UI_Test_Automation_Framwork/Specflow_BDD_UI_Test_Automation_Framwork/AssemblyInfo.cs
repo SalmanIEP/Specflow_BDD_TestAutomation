@@ -14,7 +14,7 @@ using NUnit.Framework;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: Parallelizable(ParallelScope.Fixtures)]
+//[assembly: Parallelizable(ParallelScope.Fixtures)]
 
 
 // Setting ComVisible to false makes the types in this assembly not visible 
