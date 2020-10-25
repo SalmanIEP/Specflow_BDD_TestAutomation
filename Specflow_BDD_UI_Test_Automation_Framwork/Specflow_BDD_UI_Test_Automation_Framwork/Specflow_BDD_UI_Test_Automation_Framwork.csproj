@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TestResults\**" />
+    <EmbeddedResource Remove="TestResults\**" />
+    <None Remove="TestResults\**" />
+    <SpecFlowFeatureFiles Remove="TestResults\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="TestResults\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ExtentReports.Core" Version="1.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -38,10 +46,6 @@
     <Compile Update="Steps Defination\SharedSteps.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="TestResults\" />
   </ItemGroup>
 
 </Project>
