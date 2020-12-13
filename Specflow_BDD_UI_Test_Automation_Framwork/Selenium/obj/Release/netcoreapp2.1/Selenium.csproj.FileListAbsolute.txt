@@ -23,12 +23,10 @@ D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\S
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.dll
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.pdb
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.csprojAssemblyReference.cache
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\testhost.exe
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\testhost.dll
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.dll
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.pdb
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.dll
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.api.dll
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.core.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\SeleniumHub\selenium-server-standalone-3.141.59.jar
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\appsettings.json
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\SeleniumHub\HubConfiguartions.json
@@ -36,6 +34,8 @@ D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\SeleniumHub\RegistersNodes.cmd
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\SeleniumHub\SetupSeleniumHub.cmd
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.deps.json
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.runtimeconfig.json
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.runtimeconfig.dev.json
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.pdb
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.csprojAssemblyReference.cache

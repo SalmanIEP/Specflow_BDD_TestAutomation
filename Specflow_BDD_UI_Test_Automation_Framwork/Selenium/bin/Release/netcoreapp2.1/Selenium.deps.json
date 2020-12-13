@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "6ed95bc67b9f1bb477e0943ffe4e3f849ee65bcf"
+    "signature": "f63b090f1e32333ad5d6f78da1b555e39933a0fa"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,6 @@
           "ExtentReports.Core": "1.0.3",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.0-preview-20201123-03",
-          "NUnit3TestAdapter": "4.0.0-beta.1",
           "Otp.NET": "1.2.2",
           "Selenium.Axe": "2.0.1",
           "Selenium.Support": "4.0.0-alpha07",
@@ -697,7 +696,6 @@
           }
         }
       },
-      "NUnit3TestAdapter/4.0.0-beta.1": {},
       "Otp.NET/1.2.2": {
         "runtime": {
           "lib/netstandard2.0/Otp.NET.dll": {
@@ -2304,13 +2302,6 @@
       "sha512": "sha512-BzGk+u02RCrysmLlSzD+okxzMQ8JRF4eFC/qijDJ8Y/FBdTrTkxkQyTFsYkG1o++pr7QpFAE4VDXDqIfZ/gBAg==",
       "path": "nunit/3.11.0",
       "hashPath": "nunit.3.11.0.nupkg.sha512"
-    },
-    "NUnit3TestAdapter/4.0.0-beta.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0zFXMnBlZwoSWcLGT4Ubm3NcMMtORZUYEltUuVgMl9kvzjp2G03Ek52k7gX63BmfGKRYvrmyzyZOjh4Us/5bTA==",
-      "path": "nunit3testadapter/4.0.0-beta.1",
-      "hashPath": "nunit3testadapter.4.0.0-beta.1.nupkg.sha512"
     },
     "Otp.NET/1.2.2": {
       "type": "package",

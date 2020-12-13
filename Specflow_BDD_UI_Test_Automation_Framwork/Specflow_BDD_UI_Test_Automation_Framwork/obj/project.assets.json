@@ -2949,7 +2949,7 @@
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.0-preview-20201123-03",
           "Microsoft.NETCore.App": "2.1.0",
-          "NUnit3TestAdapter": "3.17.0",
+          "NUnit3TestAdapter": "4.0.0-beta.1",
           "Otp.NET": "1.2.2",
           "Selenium.Axe": "2.0.1",
           "Selenium.Support": "4.0.0-alpha07",
@@ -9793,6 +9793,15 @@
       "warningLevel": 1,
       "message": "Package 'SpecFlow.Retry 2.4.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
       "libraryId": "SpecFlow.Retry",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Detected package downgrade: NUnit3TestAdapter from 4.0.0-beta.1 to 3.17.0. Reference the package directly from the project to select a different version. \r\n Specflow_BDD_UI_Test_Automation_Framwork -> SeleniumTestFramworkDemo -> NUnit3TestAdapter (>= 4.0.0-beta.1) \r\n Specflow_BDD_UI_Test_Automation_Framwork -> NUnit3TestAdapter (>= 3.17.0)",
+      "libraryId": "NUnit3TestAdapter",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]
