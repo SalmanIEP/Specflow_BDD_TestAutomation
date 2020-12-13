@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v2.1": {
       "Selenium/1.0.0": {
         "dependencies": {
+          "BoDi": "1.4.1",
           "ExtentReports.Core": "1.0.3",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.0-preview-20201123-03",
