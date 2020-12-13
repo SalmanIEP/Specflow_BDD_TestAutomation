@@ -9329,6 +9329,7 @@
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.0-preview-20201123-03",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.TestPlatform.TestHost >= 16.9.0-preview-20201123-03",
       "NUnit3TestAdapter >= 4.0.0-beta.1",
       "Otp.NET >= 1.2.2",
       "Selenium.Axe >= 2.0.1",
@@ -9400,6 +9401,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.TestPlatform.TestHost": {
+            "target": "Package",
+            "version": "[16.9.0-preview-20201123-03, )"
           },
           "NUnit3TestAdapter": {
             "target": "Package",
