@@ -227,23 +227,7 @@ namespace Selenium.Support.Extensions
             element.SendKeys(value);
         }
 
-        public static bool AlertIsPresent(this IWebDriver driver)
-        {
-            return AlertIsPresent(driver, new TimeSpan(0, 0, 2));
-        }
-
-        public static bool AlertIsPresent(this IWebDriver driver, TimeSpan timeout)
-        {
-            WebDriverWait wait = new WebDriverWait(driver, timeout);
-            try
-            {
-                wait.Until(ExpectedConditions.AlertIsPresent());
-                return true;
-            }
-            catch (NoSuchElementException) { }
-            catch (WebDriverTimeoutException) { }
-            return false;
-        }
+       
 
         public static IWebDriver LastWindow(this IWebDriver driver)
             => driver.SwitchTo().Window(driver.WindowHandles.Last());
