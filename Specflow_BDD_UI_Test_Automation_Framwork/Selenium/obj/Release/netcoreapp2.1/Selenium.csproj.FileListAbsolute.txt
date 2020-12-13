@@ -23,6 +23,11 @@ D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\S
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.dll
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.pdb
 D:\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.csprojAssemblyReference.cache
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.dll
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\NUnit3.TestAdapter.pdb
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.dll
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.api.dll
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\nunit.engine.core.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\testhost.exe
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\testhost.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Microsoft.TestPlatform.PlatformAbstractions.dll
