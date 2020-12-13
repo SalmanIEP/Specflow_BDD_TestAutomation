@@ -47,3 +47,4 @@ D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Debug\netcoreapp2.
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Debug\netcoreapp2.1\Selenium.AssemblyInfo.cs
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Debug\netcoreapp2.1\Selenium.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Debug\netcoreapp2.1\Selenium.pdb
+D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Debug\netcoreapp2.1\Selenium.csprojAssemblyReference.cache
