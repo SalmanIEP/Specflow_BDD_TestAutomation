@@ -9324,6 +9324,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BoDi >= 1.4.1",
       "ExtentReports.Core >= 1.0.3",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.0-preview-20201123-03",
@@ -9379,6 +9380,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "BoDi": {
+            "target": "Package",
+            "version": "[1.4.1, )"
+          },
           "ExtentReports.Core": {
             "target": "Package",
             "version": "[1.0.3, )"
