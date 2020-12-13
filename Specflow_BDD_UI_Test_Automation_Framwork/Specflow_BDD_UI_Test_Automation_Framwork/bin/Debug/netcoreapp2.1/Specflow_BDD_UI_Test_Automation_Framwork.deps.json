@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "df236a181103f44028a97b4a3d6accc57515b0da"
+    "signature": "363693f77e257ad507d9c138207cafccf9bb21fa"
   },
   "compilationOptions": {},
   "targets": {
@@ -19,6 +19,7 @@
           "SeleniumTestFramworkDemo": "1.0.0",
           "SpecFlow": "3.3.57",
           "SpecFlow.NUnit": "3.3.57",
+          "SpecFlow.Retry": "2.1.0",
           "SpecFlow.Tools.MsBuild.Generation": "3.3.57"
         },
         "runtime": {
@@ -915,6 +916,25 @@
           }
         }
       },
+      "SpecFlow.CustomPlugin/2.1.0": {
+        "dependencies": {
+          "SpecFlow": "3.3.57"
+        },
+        "runtime": {
+          "lib/net45/TechTalk.SpecFlow.Generator.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          },
+          "lib/net45/TechTalk.SpecFlow.Parser.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          },
+          "lib/net45/TechTalk.SpecFlow.Utils.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
       "SpecFlow.NUnit/3.3.57": {
         "dependencies": {
           "NUnit": "3.12.0",
@@ -925,6 +945,18 @@
           "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {
             "assemblyVersion": "3.3.0.0",
             "fileVersion": "3.3.57.43739"
+          }
+        }
+      },
+      "SpecFlow.Retry/2.1.0": {
+        "dependencies": {
+          "SpecFlow": "3.3.57",
+          "SpecFlow.CustomPlugin": "2.1.0"
+        },
+        "runtime": {
+          "lib/net45/SpecFlow.Retry.Generator.SpecFlowPlugin.dll": {
+            "assemblyVersion": "0.1.2.0",
+            "fileVersion": "0.1.2.0"
           }
         }
       },
@@ -2586,12 +2618,26 @@
       "path": "specflow/3.3.57",
       "hashPath": "specflow.3.3.57.nupkg.sha512"
     },
+    "SpecFlow.CustomPlugin/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Knq5qAUMbfAEAV+gUAkB0XkSDuy69pZrYXANeZ1PPI3uNRBJVxj51b0GyEuSsDUtSlmscrh5s6oYTioTmNzGYQ==",
+      "path": "specflow.customplugin/2.1.0",
+      "hashPath": "specflow.customplugin.2.1.0.nupkg.sha512"
+    },
     "SpecFlow.NUnit/3.3.57": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OvWWwf1QjCEWHQP1nZMkOHJ185uoUbf+GyC9MrVfbe1OOGfhT4044ejl4c1FwodlwL+HYbnWY+k7Jwh2Jo/+mA==",
       "path": "specflow.nunit/3.3.57",
       "hashPath": "specflow.nunit.3.3.57.nupkg.sha512"
+    },
+    "SpecFlow.Retry/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3kgXxMwhSMMULou5dnB5tLXTmPOInDNV/U8x7u1m1HOxPWhqoFFYex7nGaJzoXi86te2XgUF0e01C4Uk1sAR+Q==",
+      "path": "specflow.retry/2.1.0",
+      "hashPath": "specflow.retry.2.1.0.nupkg.sha512"
     },
     "SpecFlow.Tools.MsBuild.Generation/3.3.57": {
       "type": "package",

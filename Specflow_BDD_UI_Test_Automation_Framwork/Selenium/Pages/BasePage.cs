@@ -34,6 +34,16 @@ namespace Selenium.Pages
             return driver.FindElement(locator);
         }
 
+        public bool Ispresent(By locator)
+        {
+            bool ispresent = false;
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+            if (driver.FindElements(locator).Count > 0)
+                ispresent = true;
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            return ispresent;
+        }
+
         public void click(By locator)
         {
             driver.WaitUntilClickable(locator, TimeSpan.FromSeconds(20),"Element is not clickable");

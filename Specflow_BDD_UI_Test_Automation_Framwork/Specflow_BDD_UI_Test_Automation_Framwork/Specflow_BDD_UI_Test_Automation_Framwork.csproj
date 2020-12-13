@@ -14,16 +14,17 @@
 
   <ItemGroup>
     <PackageReference Include="ExtentReports.Core" Version="1.0.3" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.0-preview-20201123-03" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="Selenium.Support" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="85.0.4183.8700" />
-    <PackageReference Include="SpecFlow" Version="3.3.57" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.3.57" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.3.57" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0-beta.1" />
+    <PackageReference Include="Selenium.Support" Version="4.0.0-alpha07" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.0.0-alpha07" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="88.0.4324.2700-beta" />
+    <PackageReference Include="SpecFlow" Version="3.5.14" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.5.14" />
+    <PackageReference Include="SpecFlow.Retry" Version="2.4.0" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.5.14" />
   </ItemGroup>
 
   <ItemGroup>

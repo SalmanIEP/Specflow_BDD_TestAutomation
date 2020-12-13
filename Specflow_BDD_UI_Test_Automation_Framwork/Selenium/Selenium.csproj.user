@@ -4,7 +4,7 @@
     <ShowAllFiles>false</ShowAllFiles>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
-<PropertyGroup>
-  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-</PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
 </Project>

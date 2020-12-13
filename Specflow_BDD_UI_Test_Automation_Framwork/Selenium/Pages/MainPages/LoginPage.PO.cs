@@ -44,6 +44,7 @@ namespace Selenium.Pages.MainPages
         {
            
             click(By.XPath(Reference.Navigation.NavItem("Home")));
+            Ispresent(By.XPath(Reference.Navigation.NavItem("Home")));
             click(By.XPath(Elements.Elements.Xpath[Reference.TwoFactorAuthenticationPage.ButtonVerify]));
             Thread.Sleep(5000);
         }

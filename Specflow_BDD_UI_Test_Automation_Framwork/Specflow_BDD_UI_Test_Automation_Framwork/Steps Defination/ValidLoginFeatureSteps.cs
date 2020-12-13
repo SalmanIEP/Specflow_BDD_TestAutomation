@@ -49,6 +49,12 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Steps_Defination
             helper help = new helper(_contex);
             help.PerformAccessabilityTest("Home Page");
         }
+        [Given(@"pakistan")]
+        public void GivenPakistan()
+        {
+            Assert.IsTrue(false);
+        }
+
 
     }
 }
