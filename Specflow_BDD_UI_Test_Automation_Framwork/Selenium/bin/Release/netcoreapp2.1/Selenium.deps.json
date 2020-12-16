@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "856e6a513ced5748ef9e69aba5e38e0c2c46e6f8"
+    "signature": "d981bcad4ae3d6a57b6c233145d76e25adbfd40a"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,8 +16,8 @@
           "NUnit3TestAdapter": "4.0.0-beta.1",
           "Otp.NET": "1.2.2",
           "Selenium.Axe": "2.0.1",
-          "Selenium.Support": "4.0.0-alpha07",
-          "Selenium.WebDriver": "4.0.0-alpha07",
+          "Selenium.Support": "3.141.0",
+          "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "87.0.4280.8800",
           "SpecFlow.NUnit": "3.5.14",
           "System.Drawing.Common": "5.0.0"
@@ -855,7 +855,7 @@
         "dependencies": {
           "HtmlAgilityPack": "1.11.28",
           "Newtonsoft.Json": "12.0.3",
-          "Selenium.WebDriver": "4.0.0-alpha07"
+          "Selenium.WebDriver": "3.141.0"
         },
         "runtime": {
           "lib/netstandard2.0/Selenium.Axe.dll": {
@@ -864,25 +864,25 @@
           }
         }
       },
-      "Selenium.Support/4.0.0-alpha07": {
+      "Selenium.Support/3.141.0": {
         "dependencies": {
-          "Selenium.WebDriver": "4.0.0-alpha07"
+          "Selenium.WebDriver": "3.141.0"
         },
         "runtime": {
           "lib/netstandard2.0/WebDriver.Support.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "assemblyVersion": "3.141.0.0",
+            "fileVersion": "3.141.0.0"
           }
         }
       },
-      "Selenium.WebDriver/4.0.0-alpha07": {
+      "Selenium.WebDriver/3.141.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/WebDriver.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
+            "assemblyVersion": "3.141.0.0",
+            "fileVersion": "3.141.0.0"
           }
         }
       },
@@ -2453,19 +2453,19 @@
       "path": "selenium.axe/2.0.1",
       "hashPath": "selenium.axe.2.0.1.nupkg.sha512"
     },
-    "Selenium.Support/4.0.0-alpha07": {
+    "Selenium.Support/3.141.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-at4e7guNjfbFGqwGDGFpeTpUMDCYDZWEWGSxlc/9ZqMBVxdzfN0UshT7lf8XrjZOOyASwOiz4mM9HuDVTv0yNA==",
-      "path": "selenium.support/4.0.0-alpha07",
-      "hashPath": "selenium.support.4.0.0-alpha07.nupkg.sha512"
+      "sha512": "sha512-F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
+      "path": "selenium.support/3.141.0",
+      "hashPath": "selenium.support.3.141.0.nupkg.sha512"
     },
-    "Selenium.WebDriver/4.0.0-alpha07": {
+    "Selenium.WebDriver/3.141.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vEfFli2J+Tq4pXHzuy0eV1mlit3BcqVGcpbJd9sPliCSnTWwujfVIzTVpKdDeJqeRnWjAnR3hLjYLhfT5K28pg==",
-      "path": "selenium.webdriver/4.0.0-alpha07",
-      "hashPath": "selenium.webdriver.4.0.0-alpha07.nupkg.sha512"
+      "sha512": "sha512-wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
+      "path": "selenium.webdriver/3.141.0",
+      "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
     },
     "Selenium.WebDriver.ChromeDriver/87.0.4280.8800": {
       "type": "package",

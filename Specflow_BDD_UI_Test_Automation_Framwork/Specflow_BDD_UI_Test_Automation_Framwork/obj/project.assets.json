@@ -1171,10 +1171,10 @@
           "lib/netstandard2.0/Selenium.Axe.dll": {}
         }
       },
-      "Selenium.Support/4.0.0-alpha07": {
+      "Selenium.Support/3.141.0": {
         "type": "package",
         "dependencies": {
-          "Selenium.WebDriver": "4.0.0-alpha07"
+          "Selenium.WebDriver": "3.141.0"
         },
         "compile": {
           "lib/netstandard2.0/WebDriver.Support.dll": {}
@@ -1183,10 +1183,10 @@
           "lib/netstandard2.0/WebDriver.Support.dll": {}
         }
       },
-      "Selenium.WebDriver/4.0.0-alpha07": {
+      "Selenium.WebDriver/3.141.0": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
           "lib/netstandard2.0/WebDriver.dll": {}
@@ -2859,8 +2859,8 @@
           "NUnit3TestAdapter": "4.0.0-beta.1",
           "Otp.NET": "1.2.2",
           "Selenium.Axe": "2.0.1",
-          "Selenium.Support": "4.0.0-alpha07",
-          "Selenium.WebDriver": "4.0.0-alpha07",
+          "Selenium.Support": "3.141.0",
+          "Selenium.WebDriver": "3.141.0",
           "Selenium.WebDriver.ChromeDriver": "87.0.4280.8800",
           "SpecFlow.NUnit": "3.5.14",
           "System.Drawing.Common": "5.0.0"
@@ -4842,41 +4842,41 @@
         "selenium.axe.nuspec"
       ]
     },
-    "Selenium.Support/4.0.0-alpha07": {
-      "sha512": "at4e7guNjfbFGqwGDGFpeTpUMDCYDZWEWGSxlc/9ZqMBVxdzfN0UshT7lf8XrjZOOyASwOiz4mM9HuDVTv0yNA==",
+    "Selenium.Support/3.141.0": {
+      "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
       "type": "package",
-      "path": "selenium.support/4.0.0-alpha07",
+      "path": "selenium.support/3.141.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net35/WebDriver.Support.dll",
+        "lib/net35/WebDriver.Support.xml",
+        "lib/net40/WebDriver.Support.dll",
+        "lib/net40/WebDriver.Support.xml",
         "lib/net45/WebDriver.Support.dll",
-        "lib/net46/WebDriver.Support.dll",
-        "lib/net47/WebDriver.Support.dll",
-        "lib/net48/WebDriver.Support.dll",
+        "lib/net45/WebDriver.Support.xml",
         "lib/netstandard2.0/WebDriver.Support.dll",
-        "lib/netstandard2.1/WebDriver.Support.dll",
-        "selenium.support.4.0.0-alpha07.nupkg.sha512",
+        "lib/netstandard2.0/WebDriver.Support.xml",
+        "selenium.support.3.141.0.nupkg.sha512",
         "selenium.support.nuspec"
       ]
     },
-    "Selenium.WebDriver/4.0.0-alpha07": {
-      "sha512": "vEfFli2J+Tq4pXHzuy0eV1mlit3BcqVGcpbJd9sPliCSnTWwujfVIzTVpKdDeJqeRnWjAnR3hLjYLhfT5K28pg==",
+    "Selenium.WebDriver/3.141.0": {
+      "sha512": "wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
       "type": "package",
-      "path": "selenium.webdriver/4.0.0-alpha07",
+      "path": "selenium.webdriver/3.141.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net35/WebDriver.dll",
+        "lib/net35/WebDriver.xml",
+        "lib/net40/WebDriver.dll",
+        "lib/net40/WebDriver.xml",
         "lib/net45/WebDriver.dll",
         "lib/net45/WebDriver.xml",
-        "lib/net46/WebDriver.dll",
-        "lib/net46/WebDriver.xml",
-        "lib/net47/WebDriver.dll",
-        "lib/net47/WebDriver.xml",
-        "lib/net48/WebDriver.dll",
-        "lib/net48/WebDriver.xml",
         "lib/netstandard2.0/WebDriver.dll",
-        "lib/netstandard2.1/WebDriver.dll",
-        "selenium.webdriver.4.0.0-alpha07.nupkg.sha512",
+        "lib/netstandard2.0/WebDriver.xml",
+        "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -9414,8 +9414,8 @@
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 4.0.0-beta.1",
       "Newtonsoft.Json >= 12.0.3",
-      "Selenium.Support >= 4.0.0-alpha07",
-      "Selenium.WebDriver >= 4.0.0-alpha07",
+      "Selenium.Support >= 3.141.0",
+      "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.ChromeDriver >= 87.0.4280.8800",
       "SeleniumTestFramworkDemo >= 1.0.0",
       "SpecFlow >= 3.5.14",
@@ -9504,11 +9504,11 @@
           },
           "Selenium.Support": {
             "target": "Package",
-            "version": "[4.0.0-alpha07, )"
+            "version": "[3.141.0, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.0.0-alpha07, )"
+            "version": "[3.141.0, )"
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",

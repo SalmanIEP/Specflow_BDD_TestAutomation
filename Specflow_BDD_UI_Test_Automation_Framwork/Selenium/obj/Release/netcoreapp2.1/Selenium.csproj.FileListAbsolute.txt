@@ -43,7 +43,6 @@ D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.runtimeconfig.dev.json
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.dll
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\bin\Release\netcoreapp2.1\Selenium.pdb
-D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.csprojAssemblyReference.cache
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.csproj.CoreCompileInputs.cache
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.AssemblyInfoInputs.cache
 D:\Test\Specflow_BDD_UI_Test_Automation_Framwork\Selenium\obj\Release\netcoreapp2.1\Selenium.AssemblyInfo.cs
