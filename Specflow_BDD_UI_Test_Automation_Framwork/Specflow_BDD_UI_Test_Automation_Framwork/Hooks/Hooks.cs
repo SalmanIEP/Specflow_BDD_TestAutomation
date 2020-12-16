@@ -35,13 +35,6 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
 
         //------------------------------------------------------------------
 
-        [BeforeFeature]
-        public static void BeforeFeature(FeatureContext featureContext)
-        {
-            //Create dynamic feature name
-            featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
-        }
-
         [AfterFeature]
         public static void AfterFeature()
         {
@@ -52,7 +45,6 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         [BeforeScenario]
         public void BeforeScenario(ScenarioContext scenarioContext)
         {
-            scenario = featureName.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             var config = ConfigurationManager.Configuration();
             var isRemote = config["IsRemoteDriver"];
             var NewInstance = config["NewInstanceofBrowserForeachScenario"];
@@ -78,88 +70,13 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
             }
             
         }
-        [BeforeTestRun]
-        public static void InitializeReport()
-        {
-            //Initialize Extent report before test starts
-            var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-            outPutDirectory = outPutDirectory.Substring(0, outPutDirectory.IndexOf("bin"));
-
-            outPutDirectory = outPutDirectory.Substring(outPutDirectory.IndexOf("\\") + 1);
-            String path = Path.Combine(outPutDirectory, "TestResults\\index.html");
-            var htmlReporter = new ExtentHtmlReporter(path);
-            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            //Attach report to reporter
-            extent = new AventStack.ExtentReports.ExtentReports();
-            extent.AttachReporter(htmlReporter);
-        }
+      
         [AfterStep]
         public void InsertReportingSteps(ScenarioContext scenarioContext)
         {
 
-
-            var stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
-            PropertyInfo pInfo = typeof(ScenarioContext).GetProperty("ScenarioExecutionStatus", BindingFlags.Instance | BindingFlags.Public);
-            MethodInfo getter = pInfo.GetGetMethod(nonPublic: true);
-            object TestResult = getter.Invoke(scenarioContext, null);
-            //Pass status
-            if (scenarioContext.TestError == null)
-            {
-                if (stepType == "Given")
-                    scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "When")
-                    scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "Then")
-                    scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "And")
-                    scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text);
-            }
-            //Failure Staus
-            if (scenarioContext.TestError != null)
-            {
-                if (scenarioContext.TestError.InnerException == null)
-                {
-                    if (stepType == "Given")
-                        scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
-                    else if (stepType == "When")
-                        scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
-                    else if (stepType == "And")
-                        scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
-                    else if (stepType == "Then")
-                        scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.Message);
-                }
-                else
-                {
-                    if (stepType == "Given")
-                        scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                    else if (stepType == "When")
-                        scenario.CreateNode<When>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                    else if (stepType == "And")
-                        scenario.CreateNode<And>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                    else if (stepType == "Then")
-                        scenario.CreateNode<Then>(scenarioContext.StepContext.StepInfo.Text).Fail(scenarioContext.TestError.InnerException);
-                }
-            }
-
-            //Pending Status
-            if (TestResult.ToString() == "StepDefinitionPending")
-            {
-                if (stepType == "Given")
-                    scenarioContext.Pending();
-                else if (stepType == "When")
-                    scenarioContext.Pending();
-                else if (stepType == "Then")
-                    scenarioContext.Pending();
-                else if (stepType == "And")
-                    scenarioContext.Pending();
-
-            }
         }
-        [AfterTestRun]
-        public static void TearDownReport()
-        {
-            extent.Flush();
-        }
+        
         [AfterScenario]
         public void AfterScenario()
         {
@@ -174,11 +91,11 @@ namespace Specflow_BDD_UI_Test_Automation_Framwork.Hooks
         }
         public static void SetFeature(string Page)
         {
-            test = extent.CreateTest<Feature>("Acceability Report for: " + Page);
+           // test = extent.CreateTest<Feature>("Acceability Report for: " + Page);
         }
         public static void Createlogs(string message)
         {
-            test.CreateNode<Scenario>(message).Fail("");
+           // test.CreateNode<Scenario>(message).Fail("");
         }
 
 

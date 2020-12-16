@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "6ed95bc67b9f1bb477e0943ffe4e3f849ee65bcf"
+    "signature": "856e6a513ced5748ef9e69aba5e38e0c2c46e6f8"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,12 +12,13 @@
           "ExtentReports.Core": "1.0.3",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.0-preview-20201123-03",
+          "Microsoft.TestPlatform.TestHost": "16.9.0-preview-20201123-03",
           "NUnit3TestAdapter": "4.0.0-beta.1",
           "Otp.NET": "1.2.2",
           "Selenium.Axe": "2.0.1",
           "Selenium.Support": "4.0.0-alpha07",
           "Selenium.WebDriver": "4.0.0-alpha07",
-          "Selenium.WebDriver.ChromeDriver": "88.0.4324.2700-beta",
+          "Selenium.WebDriver.ChromeDriver": "87.0.4280.8800",
           "SpecFlow.NUnit": "3.5.14",
           "System.Drawing.Common": "5.0.0"
         },
@@ -885,7 +886,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/88.0.4324.2700-beta": {},
+      "Selenium.WebDriver.ChromeDriver/87.0.4280.8800": {},
       "SpecFlow/3.5.14": {
         "dependencies": {
           "BoDi": "1.4.1",
@@ -2466,12 +2467,12 @@
       "path": "selenium.webdriver/4.0.0-alpha07",
       "hashPath": "selenium.webdriver.4.0.0-alpha07.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/88.0.4324.2700-beta": {
+    "Selenium.WebDriver.ChromeDriver/87.0.4280.8800": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-57DjiJPliLEC+B/8ZnrTe0Re2Yoy1Hcx578UxSCyvBu2d5qwKDLZgccMWgFOLlxVEyphE167CjhEmdfZMS1h8Q==",
-      "path": "selenium.webdriver.chromedriver/88.0.4324.2700-beta",
-      "hashPath": "selenium.webdriver.chromedriver.88.0.4324.2700-beta.nupkg.sha512"
+      "sha512": "sha512-7bgZ2QNhYFofxDdlGVfUVgNJ6B785u/UeoFjEzB7O2EiggPitosPqqB/TG0KpJwvqgQTs+nNJus3rn9yNMHa1A==",
+      "path": "selenium.webdriver.chromedriver/87.0.4280.8800",
+      "hashPath": "selenium.webdriver.chromedriver.87.0.4280.8800.nupkg.sha512"
     },
     "SpecFlow/3.5.14": {
       "type": "package",
